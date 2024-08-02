@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+   
+    
+  }
+  
+  header {
+    background-color: #12a049;
+    height: 60px;
+    width: 100%;
+  }
+
+  section {
+    float: right;
+  }
+  
+  #serch {
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border-color: rgb(104, 83, 83);
+  }
+  
+  #btn1 {
+    margin-right: 30px;
+    padding: 6px;
+    background-color: #12a049;
+    color: white;
+    border-radius: 7px;
+    border-color: transparent;
+  }
+
+  article {
+    margin-top: 100px;
+  }
+  
+  table {
+    width: 100%;
+    /* border-color: transparent; */
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 5px;
+    text-align: center;
+  }
+  #aside1{
+    background-color: rgb(0, 0, 0, 0.4) ;
+  }
+  #divaside {
+    /* margin-top: 100px !important; */
+    top: 130px;
+    margin-left: 450px !important;
+    padding-left: 39px !important;
+    /* align-items: center; */
+  
+    /* margin-top: -100px; */
+    /* margin-left: 500px; */
+    position: fixed !important;
+    padding-top: 25px !important;
+    float: left;
+    height: 340px;
+    background-color: #12a049;
+    width: 30%;
+    visibility: hidden;
+    /* width: 100%;     */
+  }
+  
+  #savebtn {
+    float: right;
+    margin-right: 70px;
+    border-radius: 4px;
+    border-color: transparent;
+    padding: 5px;
+    background-color: antiquewhite;
+  }
+  
+  .txt {
+    width: 80%;
+    padding: 5px;
+    border: transparent;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f5f4f4;
+  }
+  
+  #gen {
+    margin-right: 4px;
+  }
+  
+  #gen1 {
+    margin-right: 4px;
+  }
+  
+  .genderr {
+    margin-top: 7px;
+  }
+  
+  .btntable {
+    /* margin-right: 30px; */
+    padding: 6px;
+    background-color: #12a049;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+  }

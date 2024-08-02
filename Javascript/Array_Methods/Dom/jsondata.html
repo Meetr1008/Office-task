@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mytbl">
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+        </tr>
+        <tr >
+            <td id="tr1"></td>
+            <td id="tr1"></td>
+            
+        </tr>
+        <tr >
+            <td id="tr2"></td>
+            <td id="tr1"></td>
+            
+        </tr>
+    </table>
+    <input type="button" value="Add" onclick="add()">
+</body>
+<script>
+    const data ='{"name":["meet","rajesh"]}'
+   
+    const obj = JSON.parse(data);
+    console.log(obj.name)
+   
+
+//     function add(){
+//         const obj1 ={
+//         name:["meet","rajesh"],
+    
+//         gender:"male"
+//     }
+
+
+//   const a = obj1.name;
+//   console.log(a.forEach(e=>console.log(e)))
+      
+    // }
+    function add(){
+        const data ='{"name":["meet","rajesh"]}'
+   
+   const obj = JSON.parse(data);
+  
+
+        obj.name.forEach(fun)
+
+        function fun(e){
+            document.getElementById("tr1").innerHTML
+        }
+        // document.getElementById("tr1").innerHTML = obj.name[0] ;
+        // document.getElementById("tr2").innerHTML = obj.name[1] ;
+
+    }
+    
+
+
+
+</script>
+</html>

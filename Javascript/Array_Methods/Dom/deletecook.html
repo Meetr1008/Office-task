@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cook">
+    <input type="button" value="setcook" onclick="setcook()" >
+    <input type="button" value="setcook" onclick="getcook()" >
+    <input type="button" value="delete" onclick="delete1()">
+</body>
+<script>
+    function setcook(){
+        document.cookie= "name=meet";
+        a= document.cookie;
+    }
+    function getcook(){
+        alert(document.cookie)
+    }
+    function delete1(){
+       
+        document.cookie = a + ";max-age=0";
+        a= document.cookie
+       
+        alert("cookie is deleted")
+    }
+</script>
+</html>

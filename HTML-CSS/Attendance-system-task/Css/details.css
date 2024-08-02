@@ -1,0 +1,289 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Roboto";
+}
+
+nav {
+    background-color: #FFFFFF;
+    height: 113px;
+    width: 100%;
+
+}
+
+body {
+    background-color: #F3F3F3;
+
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 112px;
+    align-items: center;
+
+
+}
+
+nav ul {
+    float: right;
+    justify-content: center;
+    width: 100%;
+
+    list-style-type: none;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    
+
+}
+
+nav ul li {
+    padding: 20px 20px;
+    font-size: 24px;
+
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    line-height: 28.23px;
+}
+
+nav img {
+    background-color: #C4C4C4;
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 30px;
+    position: absolute;
+    left: 50PX;
+}
+
+.input input {
+    height: 56px;
+    width: 22vw;
+    
+    color: black;
+    font-size: 18px;
+    background-color: 
+    #FFFBFA;
+    font-family: "Roboto";
+    font-weight: 400;
+    line-height: 28px;
+    padding-left: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+
+
+}
+
+.input .fa-search {
+    background-color: #DBDBDF;
+    color: black;
+    position: relative;
+    top: 0;
+    right: 30px;
+}
+
+.input {
+    position: relative;
+    top: 30px;
+    height: 110px;
+    text-align: center;
+}
+
+.section1 {
+    width: 90%;
+    height: 560px;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 5%;
+}
+
+.table-center {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+table {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    padding: 16px 16px;
+}
+
+th {
+    border-bottom: 3px solid #DBDBDF;
+
+}
+
+td {
+    border-bottom: 3px solid #DBDBDF;
+    padding: 20px 20px;
+
+}
+
+table,
+td {
+    font-size: 24px;
+    line-height: 28.3px;
+    font-weight: 500;
+    font-family: "Roboto";
+
+
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+#checkbtn {
+    float: right;
+    line-height: 80px;
+    font-size: 30px;
+    margin-right: 20px;
+    color: black;
+    display: none;
+
+}
+
+#check {
+    color: black;
+    display: none;
+
+}
+
+@media only screen and (max-width:768px) {
+    .input input{
+        width: 180px;
+    }
+
+}
+@media only screen and (max-width:600px) {
+   
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .grid-container {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto;
+        align-content: center;
+        padding-bottom: 10px;
+
+        gap: 20px;
+
+
+    }
+
+    #checkbtn {
+        float: right;
+        line-height: 80px;
+        font-size: 30px;
+        margin-left: 90px;
+        color: black;
+        display: block;
+        z-index: 1000;
+        margin-right: 30px;
+
+
+    }
+
+    #check {
+        float: right;
+        color: black;
+        display: none;
+
+    }
+
+    nav ul {
+        background-color: #BDB9B9;
+        padding-right: 20px;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+
+
+        transition: 0.7s;
+        top: -100%;
+        padding-top: 80px;
+    }
+
+    nav ul li {
+        text-align: center;
+        display: block;
+    }
+
+    #check:checked~ul {
+        top: 0;
+    }
+
+
+}
+
+@media only screen and (max-width:1050px) {
+    .section1 .filter-data {
+        padding-right: 0px;
+
+    }
+
+}
+
+@media only screen and (max-width:450px) {}
+
+
+
+
+
+.filter-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* padding: 40px 50px; */
+    padding-top: 40px;
+    padding-right: 180px;
+
+}
+
+.filter-data p {
+    line-height: 28.13px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+.png {
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+}
+
+.png-1 {
+    padding-right: 10px;
+}

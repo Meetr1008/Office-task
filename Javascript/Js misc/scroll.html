@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    p{
+        overflow: scroll;
+        height: 100px;
+        width: 200px;
+    }
+    </style>
+</head>
+<body>
+    <p id="para" onscroll="ons()">hello desi balak nirav how are you you are fine or not Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, repudiandae eius incidunt quam ut enim, recusandae doloribus provident odio repellat ullam possimus perferendis mollitia dolor. Itaque, nulla quo. Sequi, cum.</p>
+</body>
+<script>
+//     function ons(){
+// document.getElementById("para").style.background = "darkblue";
+// document.getElementById("para").style.color = "white" 
+//     }
+
+// using js only
+// document.getElementById("para").onscroll = function (){
+//     document.getElementById("para").style.background= "darkblue";
+//     fun()
+// }
+// function fun(){
+//     document.getElementById("para").style.color= "white";
+// }
+
+// using add event listner
+
+document.getElementById('para').addEventListener('scroll',function (){
+    document.getElementById("para").style.color = "white"
+    document.getElementById("para").style.background = "darkblue"
+})
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click" onclick="push1()">
+    <input type="button" value="remove" onclick="pop1()">
+    <input type="button" value="show" onclick="show()">
+
+    <!-- <input type="button" value="submit" onclick="submit()"> -->
+    <input type="text" id="mmm" >
+    <p id="demo"></p>
+</body>
+<script>
+    let data = '{"name":["DIPAK","NIRAL","PRAPTO"], "age":20}';
+    let a = JSON.parse(data);
+const b = a.name;
+
+
+// function submit(){
+
+
+//  console.log(c)
+// }
+
+
+function push1(){
+    let c =  document.getElementById("mmm").value 
+
+    b.push(c);
+    b.forEach(e=>console.log(e))
+}
+function pop1(){
+    b.pop()
+    b.forEach(e=>console.log(e))
+}
+function show(){
+    // b.forEach(e=>console.log(e))
+}
+
+
+
+
+
+</script>
+</html>

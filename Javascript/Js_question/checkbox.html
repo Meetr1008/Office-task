@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Select all:<input type="checkbox" id="c3" name="cd">
+    Yes:<input type="checkbox" id="c1" name="cd1" class="c">
+    No:<input type="checkbox" id="c2" name="cd2" class="c">
+    <p id="demo"></p>
+    <input type="submit" value="submit" onclick="fun()">
+
+
+    
+</body>
+<script>
+    // function fun(){
+    //     const yes = document.getElementById("c1")
+    //     const no = document.getElementById("c2")
+
+    //     const a = document.getElementById("demo")
+    //     if(yes.checked==true&&no.checked==true){
+    //         console.log("pkease")
+    //         a.innerHTML= "please cheak only one either yes or either no"
+    //     }
+    //     else if(yes.checked==true){
+    //         a.innerHTML= "you checked yes"
+    //     }
+    //     else if(no.checked==true){
+    //         a.innerHTML = "you checkd noo"
+
+    //     }
+    //     else{
+    //         a.innerHTML = "pleasse chhoose atleast one"
+    //     }
+    // }
+
+    
+        const one = document.getElementById("c3")
+        const sa = document.querySelectorAll("input.c");
+
+    
+      one.addEventListener('change',()=>{
+        if(one.checked==true){
+        sa.forEach(e => {
+                e.checked=true;
+            });
+        }
+        else{
+            sa.forEach(e=>{
+                e.checked=false;
+            })
+        }
+      })
+    
+</script>
+</html>

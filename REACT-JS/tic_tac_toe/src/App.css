@@ -1,0 +1,38 @@
+.box{
+  height: 810px;
+  background-color: #172148;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  color: aliceblue;
+}
+
+.row{
+padding: 0px;
+}
+.square{
+ 
+  padding: 40px;
+  font-size: 20px;
+  border: 1px thin black;
+ 
+  font-weight: 900;
+}
+.square:hover{
+  background-color: #dee4af;
+}
+.status{
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+.span{
+  height: 10px;
+  width: 10px;
+  
+  display: inline-block;
+}
+  
+

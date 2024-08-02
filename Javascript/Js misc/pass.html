@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Form name="form1">
+        Password:<input type="text" id="pass" name="pass"><span id="spand"></span><br><br>
+        <input type="button" value="clickme" onclick="sub()">
+    </Form>
+    
+</body>
+<script>
+    // most imp thing in passs 
+    // its not empty 
+    // must need 8 char 
+    // must need one special char
+    // must need number
+    function sub(){
+        const paass = document.form1.pass.value;
+        if(paass==""){
+           document.getElementById("spand").innerHTML= "please enter the pass"
+           document.getElementById("spand").style.color="red"
+        }
+
+    }
+
+</script>
+</html>

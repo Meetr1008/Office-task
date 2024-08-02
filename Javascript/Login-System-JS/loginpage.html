@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="../loginpage.css">
+ 
+  <body onload="noback()">
+    <div>
+      <h2>Login</h2>
+      <form>
+        <label>Email</label><br />
+        <input type="text" class="txt" id="demo1" /><br /><br />
+        <label>Password</label><br />
+        <input type="password" class="txt" id="demo2" /><br /><br />
+        <input type="button" value="Login" class="btn" onclick="login()" />
+      </form>
+     
+    </div>
+  </body>
+  <script>
+    
+function login() {
+    const password = document.getElementById("demo2").value;
+    const email = document.getElementById("demo1").value;
+
+
+    if (email + password == document.cookie) {
+      console.log(document.cookie)
+      window.location.pathname = "./logout.html";
+
+      return false;
+    } else if(email==""||email==null){
+      alert("please enter the correct email ");
+      return false;
+    
+  }
+
+    else if(password==""||password==null){
+        alert("please enter the password");
+        return false;
+    }
+    else{
+      alert("incorrect email and pass")
+    }
+  }
+  window.history.forward();
+  function noback()
+  {
+      window.history.forward();
+  }
+  </script>
+  
+</html>

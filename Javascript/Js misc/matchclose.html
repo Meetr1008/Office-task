@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mee" id="id1"><p id="pp1"></p></div>
+    <div  id="id2" class="mee"></div>
+</body>
+<script>
+    const id1 = document.getElementById("id1");
+    const pp1 = document.getElementById('pp1')
+
+
+    // matches method are check the css selector are availavbe or not if available return true other wise false
+    // console.log(id1)
+//    console.log(id1.matches(".mee1"))
+
+
+
+console.log(id1.matches(".mee"))
+
+// start the check from self eleement if it is then its console the value other wise its go to this nearest anesator(parenet element)
+console.log(pp1.closest("#pp1"))
+console.log(pp1.closest("#id1"))// its give beacuse its parant are div id1 
+
+console.log(pp1.closest("#id2")) // its give null beacuse its paarant elem are not
+
+
+//contains if it element contain then return truee otherwise false;
+
+
+console.log(id1.contains(pp1))
+</script> -->
+<!-- </html> -->
+
+

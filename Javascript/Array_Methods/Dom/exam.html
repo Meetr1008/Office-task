@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1" onsubmit="onsub(event)">
+      Fname: <input type="text" name="fname"><br><br>
+      Pass: <input type="text" name="pass1"><br><br>
+      rePass: <input type="text" name="pass2"><br><br>
+      Number: <input type="text" name="num"><br><br>
+      FullName:<input type="text" name="fullnam"><br><br>
+      Email:<input type="text" name="mail"><br><br>
+<p id="demo"></p>
+   <input type="submit">
+    </form>
+</body>
+<script>
+ function onsub(event){
+event.preventDefault()
+const name = document.form1.fname.value;
+const pass = document.form1.pass1.value;
+const repass = document.form1.pass2.value;
+const num1 = document.form1.num.value;
+const fullname2 = document.form1.fullnam.value
+const mail1 = document.form1.mail.value;
+const atpo = mail1.indexOf("@");
+const dotpo = mail1.indexOf(".");
+
+
+
+if(name==""||name==null){
+    alert("please enter your name")
+    return false;
+}
+else if(pass.length<7){
+    alert("please enter the valid length of pass")
+    return false;
+}
+else if (repass!==pass){
+    alert("pleasse enter the same password in it")
+}
+else if(isNaN(num1)){
+    alert("please enter the only number ")
+    return false;
+
+}
+
+if(fullname2==""||fullname2==null){
+    document.getElementById("demo").innerHTML = "<img src = 'th1.jpeg'/>"
+    return false;
+}
+else {
+    document.getElementById("demo").innerHTML = "<img src = 'th.jpeg'/>"
+}
+
+if(atpo<1||dotpo<atpo+6||dotpo+3<=mail1.length){
+    alert("please enter the valid mail id")
+}
+
+ }
+
+
+</script>
+</html>

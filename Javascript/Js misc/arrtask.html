@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn" onclick="fun()">breakfast</button>
+    <button class="btn" onclick="fun1()">luanch</button>
+    <button class="btn" onclick="fun2()">dinner</button>
+  </body>
+  <script>
+    arr = [];
+    var x = document.getElementsByClassName("btn");
+
+    function fun(){
+            if(arr[0]!==x[0].innerText){
+                arr.push(x[0].innerText)
+                console.log(arr)
+            }
+            else{
+                arr.pop(x[0].innerText)
+                console.log(arr)
+            }
+        }
+    
+    function fun1() {
+
+        
+      if (arr[1] !== x[1].innerText) {
+        arr.push(x[1].innerText);
+        console.log(arr);
+      } else {
+        arr.splice(1, 1);
+        console.log(arr);
+      }
+    }
+    function fun2() {
+      if (arr[2] !== x[2].innerText) {
+        arr.push(x[2].innerText);
+        console.log(arr);
+      } else {
+        arr.pop();
+        console.log(arr);
+      }
+    }
+
+
+
+  </script>
+</html>

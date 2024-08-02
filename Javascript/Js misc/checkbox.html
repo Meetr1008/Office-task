@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Select all:<input type="checkbox" id="c1"><br><br>
+
+    VIrat<input type="checkbox" class="c2"><br><br>
+    Dipko<input type="checkbox" class="c2">
+    naresh<input type="checkbox" class="c2">
+   
+  
+</body>
+<script>
+    // const a = document.getElementById("c1").checked;
+    let b = document.querySelectorAll("input.c2");
+    
+ let c = document.querySelector("input#c1");
+
+
+
+c.addEventListener('change',()=>{
+    if(c.checked==true){
+        b.forEach(e => {
+            e.checked=true
+        });
+    }
+    else{
+        b.forEach(e => {
+            e.checked=false;
+        });
+    }
+})
+  
+
+  b.forEach((e,i)=>{
+        
+      e.addEventListener('click',()=>{
+        const f = [...b]
+   b= Array.from(f).every(fun3)
+    function fun3(e){
+        return e.checked
+// if(b.checked==true){
+//     c.checked=true
+// }
+// else{
+//     c.checked = false
+// }
+    }
+      })
+       
+      })
+        
+    
+  
+  
+   
+ 
+ 
+
+
+
+
+ 
+      
+
+</script>
+</html>

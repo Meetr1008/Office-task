@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selc" onchange="fav()">
+        <option>Choose-Name-from here</option>
+        <option>Meet</option>
+        <option>Nirav</option>
+        <option>dipko</option>
+    </select>
+
+    <input type="text" id="demo">
+</body>
+<script>
+    function fav(){
+        const a = document.getElementById("selc");
+        console.log(a.value)
+        document.getElementById("demo").value = a.value
+    }
+</script>
+</html>
+
+

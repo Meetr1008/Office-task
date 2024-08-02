@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    table,
+    th,
+    td {
+      width: 33.33%;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table id="tbody">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Number</th>
+    </tr>
+  </table>
+  <br /><br />
+  Name: <input type="text" id="name" /> Age:
+  <input type="text" id="age" /> Number: <input type="text" id="num" />
+  <input type="button" value="submit" onclick="sub()" /><br>
+
+
+  <input type="text" id="serch1" placeholder="Serch" oninput="serch(id)">
+</body>
+
+<script>
+  const arr = [];
+  let count = 0;
+  let selectrow = null;
+
+  function sub() {
+    const a = document.getElementById("name").value;
+    const b = document.getElementById("age").value;
+    const c = document.getElementById("num").value;
+
+    if (selectrow !== null) {
+      const index = arr.findIndex((item) => item.id === selectrow);
+
+      if (index !== -1) {
+        arr[index].name = a;
+        arr[index].age = b;
+        arr[index].num = c;
+
+        const t1 = document.getElementById(selectrow);
+
+        t1.innerHTML = `<td>${arr[index].name}</td>
+          <td>${arr[index].age}</td>
+          <td>${arr[index].num}</td>
+          <td> <input type="button" value="Edit" onclick="edit('${selectrow}')" class="edit"></td>
+          <td> <input type="button" value="Delete" onclick="dlt('${selectrow}')"  class="dlt"></td>`;
+
+        selectrow = null;
+
+        console.log(arr);
+        return; // Exit function early since we've updated the existing row
+      }
+    }
+
+    const obj = { id: `${count}`, name: `${a}`, age: `${b}`, num: `${c}` };
+    arr.push(obj);
+    count++;
+
+    const t = document.createElement("tr");
+    t.setAttribute("id", `${obj.id}`);
+
+    t.innerHTML = `<td>${obj.name}</td>
+      <td>${obj.age}</td>
+      <td>${obj.num}</td>
+      <td> <input type="button" value="Edit" onclick="edit('${obj.id}')" class="edit"></td>
+      <td> <input type="button" value="Delete" onclick="dlt('${obj.id}')"  class="dlt"></td>`;
+
+    const table = document.getElementById("tbody");
+    table.appendChild(t);
+    console.log(arr);
+  }
+
+  function edit(id) {
+    selectrow = id; // Set selectrow to the ID of the row being edited
+    const index = arr.findIndex((item) => item.id === id);
+
+    if (index !== -1) {
+      document.getElementById("name").value = arr[index].name;
+      document.getElementById("age").value = arr[index].age;
+      document.getElementById("num").value = arr[index].num;
+    }
+  }
+
+  function dlt(id) {
+    console.log(id);
+
+    const index = arr.findIndex((item) => item.id === id);
+
+    if (index !== -1) {
+      arr.splice(index, 1);
+      document.getElementById(id).remove();
+    }
+
+    console.log(arr);
+  }
+
+  function serch() {
+    const searchTerm = document.getElementById("serch1").value.toLowerCase();
+
+    arr.forEach(item => {
+        const row = document.getElementById(item.id);
+        const name = item.name.toLowerCase();
+        if (name.includes(searchTerm)) {
+            row.style.display = ""; // Show the row
+        } else {
+            row.style.display = "none"; // Hide the row
+        }
+    });
+}
+
+</script>
+</html>
+

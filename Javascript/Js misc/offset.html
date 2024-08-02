@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #demo{
+        background-color: chartreuse;
+        height: 120px;
+        width: 150px;
+        border: 3px solid black;
+        padding: 40px;
+        
+    }
+</style>
+<body>
+    <div id="demo">
+<p>hello this is offset height how are you </p>
+
+    </div>
+    <input type="button" value="clickme" onclick="getinfo()">
+
+    
+</body>
+<script>
+    //it give height along with padding origin height and border
+    function getinfo(){
+        let a = document.getElementById("demo");
+        console.log(a.offsetHeight)
+        console.log(a.offsetWidth)
+    }
+</script>
+</html>

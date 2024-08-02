@@ -1,0 +1,40 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div {
+    background-color: #f5f4f4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 25%;
+    height: 270px;
+    margin-top: 160px;
+    padding-top: px;
+    padding-left: 20px;
+  }
+  .txt {
+    padding-top: 8px;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 15px;
+  }
+
+  .btn {
+    background-color: azure;
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: white;
+    background-color: #0b4377;
+    font-weight: 300;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 7px;
+    margin-right: 5px;
+  }
+  h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }

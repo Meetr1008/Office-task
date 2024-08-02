@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <input type="button" value="set" id="set" onclick="setcook()">
+    <input type="button" value="set" id="get" onclick="getcook()">
+    <input type="button" value="set" id="get" onclick="dltcook()">
+
+</body>
+<script>
+    function setcook(){
+        const a  = "name: "+ document.getElementById("txt").value;
+        document.cookie= a ;
+         c = document.cookie
+    }
+    function getcook(){
+        alert(document.cookie)
+    }
+    function dltcook(){
+        document.cookie = c + ";expires=wed,17 april 2024 06:09:00";
+        c = document.cookie;
+        alert("cookie is deleted")
+
+       
+    }
+</script>
+</html>

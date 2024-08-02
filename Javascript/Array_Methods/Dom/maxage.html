@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="setcook()" value="set">
+    <input type="button" onclick="getcook()" value="get">
+</body>
+
+<script>
+    function setcook(){
+        document.cookie= "name= nirav;max-age=2;" 
+    }
+
+    function getcook(){
+        if(document.cookie.length!=0){
+            console.log(document.cookie)
+            alert(document.cookie)
+        }else{
+          alert("empty")
+        }
+        
+    }
+</script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="button" onclick="setCookie()" value="setCookie">
+    <input type="button" onclick="getCookie()" value="getCookie">
+    <script>
+        function setCookie(){
+            document.cookie = "name1 = prerna patel;max-age=9;"
+            // document.cookie = "name = xyz patel;max-age= " +  0 + ";"
+        }
+        function getCookie(){
+            if(document.cookie.length!=0){
+                console.log(document.cookie);
+                alert(document.cookie)
+            }
+            else{
+                console.log("empty")
+                alert("empty")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: inline-block;
+
+        }
+        #na{
+            background-color: aqua;
+            display: none;
+             
+          }
+          #na a {
+        
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+            display: block;    
+          }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="fun()">Clickme to show name</button>
+        <div  id="na">
+            <a>Meet</a>
+            <a>Nirav</a>
+            <a>Dipkooo</a>
+            <a>Bhava</a>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function fun(){
+        const a = document.getElementById("na");
+        if(a.style.display=="none"){
+            a.style.display="block"
+        }
+        else{
+            a.style.display = "none"
+        }
+           
+    }
+</script>
+</html>

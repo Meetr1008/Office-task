@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="set cookie" onclick="setcook()">
+    <input type="button" onclick="getcook()" value="get cook">
+
+
+    <!-- <select id="color" onchange="display()">
+        <option value="Select Color">Select Color</option>
+        <option value="yellow">yellow</option>
+        <option value="orange">orange</option>
+    </select> -->
+
+</body>
+<script>
+//example 3 jt
+// function display(){
+//     const value = document.getElementById("color").value;
+
+//     if(value!="Select Color"){
+//         document.bgColor = value;
+//         document.cookie= "color"+value
+//     }
+// }
+// window.onload = function ()  
+//                 {  
+//                     if (document.cookie.length != 0)  
+//                     {  
+//                         var array = document.cookie.split("=");  
+//                         document.getElementById("color").value = array[31];  
+//                         document.bgColor = array[1]; 
+                     
+//                     }  
+//                 }  
+               
+
+
+// cookie example1 jt
+function setcook(){
+
+    document.cookie=  "nananana=232323;max-age="+(1*0*0*0) +";"
+}
+
+function getcook(){
+    alert(document.cookie)
+}
+
+//cookie example2 jt
+// function setcook(){
+//     const key = prompt("enter your key")
+//     const value = prompt("enter your value")
+//     document.cookie= `${key}=${value}`
+    
+// }
+
+// function getcook(){
+//     const a = document.cookie.split("=")
+//     alert("Name:"+a[0]+ " " +"value:"+a[1] )
+// }
+
+
+// const key = prompt("enter your key")
+// const value = prompt("enter your value")
+// document.cookie = `${key}=  ${value}`
+//    console.log(document.cookie)
+
+//  document.cookie = "name=meet; expires=mon,15,april 2024 12:06:20 UTC";
+//  document.cookie = "name=nirav  expires=mon,15,april 2024 12:06:20 UTC";
+//  console.log(document.cookie)
+ 
+</script>
+</html>

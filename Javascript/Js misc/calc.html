@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="demo">
+
+    <button class="class1"onclick="onclick1()" value="1">1</button>
+    <button class="class1" onclick="onclick2()" value="2">2</button>
+    <button class="class1" onclick="onclick3()" value="3">3</button>
+    <button class="class1" onclick="onclick4()" value="3">+</button>
+    <button class="class1" onclick="onclick5()" value="3">*</button>
+    <button class="class1" onclick="onclick6()" value="3">/</button>
+    <button class="class1" onclick="onclick7()" value="3">-</button>
+    <button class="class1" onclick="onclick8()" value="3">=</button>
+
+
+
+
+</body>
+<script>
+let x = document.getElementsByClassName("class1");
+    function onclick1(){
+
+   document.getElementById("demo").value += x[0].innerText
+    }
+    function onclick2(){
+
+document.getElementById("demo").value += x[1].innerText
+ }
+ function onclick3(){
+
+document.getElementById("demo").value += x[2].innerText
+ }
+ function onclick4(){
+
+document.getElementById("demo").value += x[3].innerText
+ }
+ function onclick5(){
+
+document.getElementById("demo").value += x[4].innerText
+ }
+ function onclick6(){
+
+document.getElementById("demo").value += x[5].innerText
+ }
+ function onclick7(){
+
+document.getElementById("demo").value += x[6].innerText
+ }
+
+ function onclick8(){
+console.log( eval(document.getElementById("demo").value))
+document.getElementById("demo").value =  eval(document.getElementById("demo").value)
+ }
+</script>
+</html>

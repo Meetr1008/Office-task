@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // function fun(){
+    //     let a = 4;
+
+    //    function inner(){
+    //     return a
+    //    }
+    //    return inner()
+
+    // }
+    // console.log(fun())
+
+    //     function out(a,b){
+    //     //  let a = 5;
+    //     //  let b = 3;
+
+    //          function inner(){
+    //             return a*b
+    //          }
+    //          return inner
+    //     }
+    //    let a = out(4,3)
+    //    console.log(a())
+
+    // function init(){
+    //     let name = "meet";
+    //     function disname(){
+    //         console.log(name)
+    //     }
+
+    //     return disname
+    // name = "dipko"
+
+    // }
+
+    // let c = init()
+    // c()
+
+    // function returnfun(){
+    //     let x = ()=>{
+    //         let a = 1;
+    //         console.log(a)
+    //         let y = ()=>{
+    //             // let a = 2;
+    //             console.log(a)
+    //             let z = ()=>{
+    //                 // let a = 3;
+    //                 console.log(a)
+    //             }
+    //             z()
+    //         }
+    //         a = 98
+    //         y()
+    //     }
+    //     return x
+    // }
+    // let a = returnfun()
+    // a()
+
+    // function fun() {
+    //   function closure(val) {
+    //     return function () {
+    //       return val;
+    //     };
+    //   }
+    //   var a = [];
+    //   var i;
+    //   for (i = 0; i < 5; i++) {
+    //     a[i] = closure(i);
+    //   }
+    //   return a;
+    // }
+    // var output = fun();
+    // document.write(output[0]());
+    // document.write(" ");
+    // document.write(output[1]());
+    // document.write(" ");
+    // document.write(output[2]());
+    // document.write(" ");
+    // document.write(output[3]());
+    // document.write(" ");
+    // document.write(output[4]());
+    document.querySelector("input").addEventListener("click", fun);
+    function fun() {
+      const parentCheck = document.querySelector("#mainCheck");
+      const childCheck = document.querySelectorAll("#childCheck");
+      parentCheck.addEventListener("click", () => {
+        if (parentCheck.checked) {
+          childCheck.forEach((e) => (e.checked = true));
+        } else {
+          childCheck.forEach((e) => (e.checked = false));
+        }
+      });
+    }
+
+
+
+  </script>
+</html>

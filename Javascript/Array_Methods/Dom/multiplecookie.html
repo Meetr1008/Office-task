@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="name" id="name">
+    <input type="email" name="email" id="email">
+    <input type="button" value="set" onclick="setcook()">
+    <input type="button" value="get" onclick="getcook()">
+
+</body>
+<script>
+    function setcook(){
+
+        const obj = {}
+        obj.name = document.getElementById("name").value;
+        obj.email = document.getElementById("email").value
+
+        const jsonstr = JSON.Stringyfy(obj)
+        document.cookie= jsonstr
+    }
+
+    function getcook(){
+        alert(document.cookie)
+    }
+</script>
+</html>

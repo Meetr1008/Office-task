@@ -1,0 +1,88 @@
+body {
+    background-color: white;
+
+}
+
+#btn1 {
+    float: right;
+    margin-top: 5px;
+    margin-right: 19px;
+}
+
+section {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f5f4f4;
+    text-align: left;
+    padding-left: 20px;
+    width: 30%;
+    padding-top: 20px;
+    font-size: 14px;
+    height: 270px;
+}
+
+div .btn {
+    float: right;
+    margin-right: 30px;
+}
+
+table {
+    margin-top: 40px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+table,
+tr {
+    border: 1px solid transparent;
+    /* width: 30%; */
+
+    height: 30px;
+    border-collapse: collapse;
+}
+
+th {
+    width: 25%;
+    background-color: #f5f4f4;
+    border: 2px solid transparent;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+
+.btn {
+    background-color: azure;
+    /* font-family: 'Courier New', Courier, monospace; */
+    color: white;
+    background-color: #0b4377;
+    font-weight: 300;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 7px;
+    margin-right: 5px;
+}
+
+.txt {
+    padding-top: 8px;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 4px;
+    border-color: transparent;
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f4f4;
+}

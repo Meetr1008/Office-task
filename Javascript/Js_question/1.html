@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="meetu">Dinner</button>
+    <button class="meetu">Launch</button>
+    <button class="meetu" >Breakfast</button>
+    
+
+</body>
+
+<script>
+    const arr = []
+        const a = document.querySelectorAll("button.meetu");
+        a.forEach((e,i)=>{
+            e.addEventListener('click',()=>{
+                if(!arr.includes(e.innerHTML)){
+                    arr.push(e.innerHTML)
+            console.log(arr)
+                }else{
+
+                    arr.filter((e)=>{
+                        arr.pop()
+                    })
+                // const index = arr.indexOf(e.innerHTML);
+                // if(index!==-1){
+                //     arr.splice(index,1)
+                //     console.log(arr)
+                // }
+                }
+           
+            })
+        })
+    
+    
+</script>
+</html>

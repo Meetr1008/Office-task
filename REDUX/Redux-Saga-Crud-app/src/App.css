@@ -1,0 +1,10 @@
+table{
+  border-color: antiquewhite;
+  width: 100%;
+}
+
+ th td {
+  text-align: center;
+  width: 100%;
+  border: 1px  solid white;
+}

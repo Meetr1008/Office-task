@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input class="demo" type="button" value="xyz1" />
+    <input class="demo" type="button" value="xyz2" />
+    <input class="demo" type="button" value="xyz3" />
+  </body>
+  <script>
+    data = [
+      
+
+    ]
+
+      let a = document.querySelectorAll("input.demo");
+
+      a.forEach((e,i )=>{
+    e.addEventListener('click',()=>{
+        if(e.style.backgroundColor==''){
+            e.style.backgroundColor= 'red'
+        }
+        else{
+            e.style.backgroundColor=''
+        }
+    })
+    })
+  </script>
+</html>

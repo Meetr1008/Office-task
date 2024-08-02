@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="homepage.css" />
+  <body onload="noback()">
+    <input
+      type="button"
+      value="Logout"
+      id="btn1"
+      class="btn"
+      onclick="logout()"
+    /><br /><br />
+    <section>
+      <div>
+        <form onsubmit="validation(event)" name="form">
+          <label>Name</label><br />
+          <input class="txt" type="text" name="name" id="name" /><br /><br />
+          <label>Address</label><br />
+          <input type="text" class="txt" name="add" id="num" /><br /><br />
+          <label>Phone Number</label><br />
+          <input type="number" class="txt" name="number" id="Age" /><br /><br />
+
+          <input type="submit" value="Submit" class="btn" /><br /><br />
+        </form>
+      </div>
+    </section>
+
+    <table>
+      <thead id="thead">
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <br /><br />
+  </body>
+  <script>
+    //validation  of form input----------------
+
+    function validation(event) {
+      event.preventDefault();
+
+      const fname = document.form.name.value;
+      const address = document.form.add.value;
+      const phnumber = document.form.number.value;
+      if (fname == "") {
+        alert("please enter the name");
+        return false;
+      } else if (address == "") {
+        alert("please enter the Address");
+        return false;
+      } else if (phnumber == "" || phnumber == null) {
+        alert("please enter the number");
+        return false;
+      } else if (phnumber.length < 10 || phnumber.length > 10) {
+        alert("please enter the valid length of number");
+      } else {
+        //crud opration of table ----------
+
+        const tbody = document.getElementById("tbody");
+
+        // get all id of input field -----
+
+        const name = document.getElementById("name");
+        const num = document.getElementById("num");
+        const age = document.getElementById("Age");
+
+        // create row ---
+        const tr = document.createElement("tr");
+
+        // create table data child ----
+
+        const td = document.createElement("td");
+        tdchild = document.createTextNode(name.value);
+        td.appendChild(tdchild);
+        const td1 = document.createElement("td");
+        tdchild1 = document.createTextNode(num.value);
+        td1.appendChild(tdchild1);
+        const td2 = document.createElement("td");
+        tdchild2 = document.createTextNode(age.value);
+        td2.appendChild(tdchild2);
+
+        // append table three data into the table row -------
+
+        const a = tr.appendChild(td);
+        const e = tr.appendChild(td1);
+        const f = tr.appendChild(td2);
+
+        // create button for delete and edit action ----------
+
+        const dltbtn = document.createElement("button");
+        dltbtn.innerHTML = "Delete";
+        dltbtn.setAttribute("class", "btn");
+
+        const editbtn = document.createElement("button");
+        editbtn.innerHTML = "Edit";
+        editbtn.setAttribute("class", "btn");
+
+        // run add eventevent listner on button---------
+
+        dltbtn.addEventListener("click", () => {
+          const tbody1 = document.getElementById("tbody");
+          tbody1.removeChild(tr);
+        });
+
+        //run add event listner on edit button -------------------
+
+        editbtn.addEventListener("click", () => {
+          td.innerHTML = prompt("Enter the Name");
+          td1.innerHTML = prompt("Enter the Address");
+          td2.innerHTML = prompt("Enter the Phone-Number");
+        });
+
+        // append both button in table row-----------------
+        const g = tr.appendChild(dltbtn);
+        const h = tr.appendChild(editbtn);
+        tbody.appendChild(tr);
+
+        const name5 = (document.getElementById("name").value = "");
+        const num6 = (document.getElementById("num").value = "");
+        const age6 = (document.getElementById("Age").value = "");
+
+        return true;
+      }
+    }
+
+    function logout() {
+      window.location.pathname = "./loginpage.html";
+    }
+//     window.history.pushState(null, null, window.location.href="./logout.html");
+// window.onpopstate = function() {
+//     window.history.forward();
+// };
+
+window.history.forward();
+    function noback()
+    {
+        window.history.forward();
+    }
+    
+  </script>
+</html>

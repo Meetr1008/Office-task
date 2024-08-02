@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="list" onchange="fun()">
+        <option>Select ans</option>
+        <option value="Yes">Yes</option>
+        <option>No</option>
+    </select><br><br>
+    Are you wantedd a name:<input type="checkbox" id="check" onchange="fun()"><br><br>
+    Meet:<input type="radio" id="a1" value="meet">
+    Nirav:<input type="radio" id="a2" value="nirav parikh">
+
+</body>
+<script>
+
+   function fun(){
+    const a = document.getElementById("check").checked;
+    if(a==true){
+        document.getElementById("a1").disabled = true;
+        document.getElementById("a2").disabled = true;
+    }
+    else{
+        document.getElementById("a1").disabled = false;
+        document.getElementById("a2").disabled = false;
+    }
+
+   }
+
+
+    // function fun(){
+    //     const a = document.getElementById("list");
+    //     var b = a.options[a.selectedIndex].text; 
+    //     if(b=="No"){
+    //         // document.getElementById("a1").disabled = true; 
+    //         document.getElementById("a1").disabled = true;
+    //     }
+    //     else{
+    //         document.getElementById("a1").disabled = false;
+    //     }
+    //     }
+
+    
+
+</script>
+</html>

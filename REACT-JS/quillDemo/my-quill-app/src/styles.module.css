@@ -1,0 +1,28 @@
+.wrapper {
+    padding: 2rem 3rem;
+
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.btn {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: transparent;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.editor {
+    height: 200px;
+}
+
+.img{
+    height: 100px;
+}
